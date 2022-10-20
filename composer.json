@@ -2,7 +2,7 @@
     "name": "asayhome/asay-tickets-laravel",
     "autoload": {
         "psr-4": {
-            "AsayHome\\AsayTicketsLaravel\\": "src/"
+            "AsayHome\\AsayTickets\\": "src/"
         }
     },
     "authors": [
@@ -14,7 +14,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AsayHome\\AsayTicketsLaravel\\AsayTicketsLaravelProvider"
+                "AsayHome\\AsayTickets\\AsayTicketsProvider"
             ]
         }
     },
