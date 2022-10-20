@@ -1,0 +1,22 @@
+{
+    "name": "asayhome/asay-tickets-laravel",
+    "autoload": {
+        "psr-4": {
+            "AsayHome\\AsayTicketsLaravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abdelrahman Saeed Elhassan",
+            "email": "abdosaeedelhassan@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AsayHome\\AsayTicketsLaravel\\AsayTicketsLaravelProvider"
+            ]
+        }
+    },
+    "require": {}
+}
