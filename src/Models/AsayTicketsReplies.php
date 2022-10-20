@@ -23,7 +23,7 @@ class AsayTicketsReplies extends Model
     {
         return $this->hasOne(AsayTickets::class, 'id', 'ticket_id');
     }
-    public function createdBy()
+    public function sender()
     {
         return $this->hasOne(UserModel::class, 'id', 'created_by');
     }

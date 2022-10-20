@@ -31,7 +31,7 @@ class AsayTickets extends Model
     }
     public function replies()
     {
-        return $this->hasMany(AsayTicketsReplies::class,  'ticket_id', 'id')->with('createdBy');
+        return $this->hasMany(AsayTicketsReplies::class,  'ticket_id', 'id')->with('sender');
     }
 
     public $hidden = [

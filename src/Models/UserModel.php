@@ -22,7 +22,7 @@ class UserModel extends Model
         }
     }
 
-    public $append = ['name'];
+    protected $appends = ['name'];
 
     public $hidden = [
         'created_at',
