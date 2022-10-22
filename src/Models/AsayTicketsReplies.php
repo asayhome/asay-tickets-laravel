@@ -25,11 +25,11 @@ class AsayTicketsReplies extends Model
     }
     public function sender()
     {
-        return $this->hasOne(UserModel::class, 'id', 'created_by');
+        return $this->hasOne(UserModel::class, 'id', 'created_by')->select(config('asay-tickets.userSelectedFileds'));
     }
 
     public $hidden = [
-        'created_at',
+        //  'created_at',
         'updated_at',
         'deleted_at',
     ];

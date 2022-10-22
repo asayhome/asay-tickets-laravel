@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('subject');
             $table->longText('body');
             $table->integer('status');
+            $table->timestamp('closed_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -18,6 +18,7 @@ class AsayTickets extends Model
         'subject',
         'body',
         'status',
+        'closed_at'
     ];
 
 
@@ -35,7 +36,7 @@ class AsayTickets extends Model
     }
 
     public $hidden = [
-        'created_at',
+        // 'created_at',
         'updated_at',
         'deleted_at',
     ];

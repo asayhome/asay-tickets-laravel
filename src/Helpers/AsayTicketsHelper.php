@@ -25,4 +25,14 @@ class AsayTicketsHelper
             ]),
         ]);
     }
+
+    public static function changeTicketStatus($ticket, $status)
+    {
+        $ticket->status = $status;
+        if ($status == self::$status_closed) {
+            $ticket->closed_at = date('Y-m-d H:i:s');
+        }
+        $ticket->save();
+        //ToDo:: add statuses notifications
+    }
 }
