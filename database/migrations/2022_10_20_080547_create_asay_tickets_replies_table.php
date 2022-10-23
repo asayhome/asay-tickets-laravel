@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignIdFor(AsayTickets::class, 'ticket_id');
             $table->unsignedBigInteger('created_by');
             $table->longText('message');
+            $table->longText('attachments');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -16,13 +16,20 @@ class AsayTicketsReplies extends Model
     public $fillable = [
         'ticket_id',
         'created_by',
-        'message'
+        'message',
+        'attachments',
     ];
+
+    public function getAttachmentsAttribute($value)
+    {
+        return json_decode($value);
+    }
 
     public function ticket()
     {
         return $this->hasOne(AsayTickets::class, 'id', 'ticket_id');
     }
+
     public function sender()
     {
         return $this->hasOne(UserModel::class, 'id', 'created_by')->select(config('asay-tickets.userSelectedFileds'));
