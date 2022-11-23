@@ -24,11 +24,11 @@ class AsayTickets extends Model
 
     public function section()
     {
-        return $this->hasOne(AsayTicketsSections::class, 'id', 'section_id');
+        return $this->hasOne(AsayTicketsSections::class, 'id', 'section_id')->withTrashed();
     }
     public function createdby()
     {
-        return $this->hasOne(UserModel::class, 'id', 'created_by');
+        return $this->hasOne(UserModel::class, 'id', 'created_by')->withTrashed();
     }
     public function replies()
     {
