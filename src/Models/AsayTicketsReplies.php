@@ -27,12 +27,13 @@ class AsayTicketsReplies extends Model
 
     public function ticket()
     {
-        return $this->hasOne(AsayTickets::class, 'id', 'ticket_id');
+        return $this->hasOne(AsayTickets::class, 'id', 'ticket_id')->withTrashed();
     }
 
     public function sender()
     {
-        return $this->hasOne(UserModel::class, 'id', 'created_by')->select(config('asay-tickets.userSelectedFileds'));
+        return $this->hasOne(UserModel::class, 'id', 'created_by')->withTrashed()
+            ->select(config('asay-tickets.userSelectedFileds'));
     }
 
     public $hidden = [
