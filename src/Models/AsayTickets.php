@@ -26,13 +26,15 @@ class AsayTickets extends Model
     {
         return $this->hasOne(AsayTicketsSections::class, 'id', 'section_id')->withTrashed();
     }
+
     public function createdby()
     {
         return $this->hasOne(UserModel::class, 'id', 'created_by')->withTrashed();
     }
+
     public function replies()
     {
-        return $this->hasMany(AsayTicketsReplies::class,  'ticket_id', 'id')->with('sender');
+        return $this->hasMany(AsayTicketsReplies::class, 'ticket_id', 'id')->with('sender');
     }
 
     public $hidden = [

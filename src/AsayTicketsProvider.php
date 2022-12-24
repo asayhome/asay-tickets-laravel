@@ -16,6 +16,7 @@ class AsayTicketsProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__ . '/../lang', 'asay-tickets');
         // $this->loadViewsFrom(__DIR__ . '/../resources/views', 'asay-tickets');
     }
+
     public function register()
     {
         $this->mergeConfigFrom(
